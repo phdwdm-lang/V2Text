@@ -1,0 +1,4 @@
+requests>=2.28
+dashscope>=1.14
+openai>=1.0
+python-docx>=1.1

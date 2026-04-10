@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书视频转知乎"
+  short_description: "将小红书视频链接或视频文件转为清洗逐字稿，并改写为知乎图文初稿。"
+  default_prompt: "把这条小红书内容转成适合知乎发布的图文稿。"
