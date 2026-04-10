@@ -16,7 +16,7 @@
 ## 安装
 
 ```bash
-npx skills add <你的GitHub用户名>/xhs-video-to-zhihu
+npx skills add phdwdm-lang/V2Text
 ```
 
 > 需要 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 或其他支持 Skills 的 AI 编程工具。
