@@ -47,10 +47,16 @@ def strip_frontmatter(content: str) -> str:
 
 
 def convert_wikilink_images(content: str) -> str:
-    """将 ![[文件名.jpg]] 转为 ![](截图/文件名.jpg)"""
+    """将 Obsidian 图片嵌入转为标准 Markdown 图片语法。
+
+    说明：
+    - ![[文件名.jpg]] -> ![](文件名.jpg)
+    - ![[子目录/文件名.jpg]] -> ![](子目录/文件名.jpg)
+    不再强行补前缀，避免把已经带目录的路径再次拼错。
+    """
     return re.sub(
-        r"!\[\[([^\]]+\.(jpg|png|jpeg|gif|webp))\]\]",
-        r"![](截图/\1)",
+        r"!\[\[([^\]]+\.(jpg|png|jpeg|gif|webp|svg))\]\]",
+        r"![](\1)",
         content,
     )
 
